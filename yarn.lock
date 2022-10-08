@@ -1169,7 +1169,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.0.1.tgz#b6b8d81780b9a9f6459f4bfe9226ac6aefaefe87"
   integrity sha512-aG20vknL4/YjQF9BSV7ts4EWm/yrjagAN7OWBNmlbEOUiu0llj4OGrFoOKK3g2vey4/p2omKCoHrWtPxSwV3HA==
 
-"@deck.gl/aggregation-layers@8.8.2":
+"@deck.gl/aggregation-layers@8.8.2", "@deck.gl/aggregation-layers@^8.8.2":
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/@deck.gl/aggregation-layers/-/aggregation-layers-8.8.2.tgz#e32e667ac4ff4d90814e19eff15889072688a47f"
   integrity sha512-OIij2PCBT0VHfYl83WcrZko+kO9DEv/Vx7jp33SQRZSvNvj28ivudrApmUnlJ9w17LOZBX1E2QAdD47Ms5bCeQ==
@@ -1290,7 +1290,7 @@
     "@luma.gl/experimental" "^8.5.14"
     "@luma.gl/shadertools" "^8.5.14"
 
-"@deck.gl/react@8.8.2":
+"@deck.gl/react@8.8.2", "@deck.gl/react@^8.8.2":
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/@deck.gl/react/-/react-8.8.2.tgz#225bf26f6b6e84db255851983c8080d261490ff8"
   integrity sha512-bZjB5UD0edEtjasHRYu/kBg9ltPetXUEA8nJVWRZz25eYKzgojbfFWJ7xfCbdf/uqpwfcqyfupkvULn/837M0Q==
@@ -2414,7 +2414,7 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/mapbox-gl@^2.6.3":
+"@types/mapbox-gl@*", "@types/mapbox-gl@^2.6.0", "@types/mapbox-gl@^2.6.3", "@types/mapbox-gl@^2.7.3":
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-2.7.3.tgz#d75049251f1cb5f5a5453d6c20ffb9d2de6cbd75"
   integrity sha512-XdveeJptNNZw7ZoeiAJ2/dupNtWaV6qpBG/SOFEpQNQAc+oiO6qUznX85n+W1XbLeD8SVRVfVORKuR+I4CHDZw==
@@ -2482,6 +2482,16 @@
   integrity sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==
   dependencies:
     "@types/react" "*"
+
+"@types/react-map-gl@^6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@types/react-map-gl/-/react-map-gl-6.1.3.tgz#b518a3ee0f51ed7be2b1574c77320c8b26266b3e"
+  integrity sha512-22R7vE/XT/S+Nwu7245llMW+vO8ITPQJHaiRCO9RxmUUdV2kio7mQWaL8M5ko3XMt+7Hyz5ComNI4AopXZsxMA==
+  dependencies:
+    "@types/geojson" "*"
+    "@types/mapbox-gl" "*"
+    "@types/react" "*"
+    "@types/viewport-mercator-project" "*"
 
 "@types/react@*", "@types/react@^18.0.0":
   version "18.0.14"
@@ -2552,6 +2562,13 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
+
+"@types/viewport-mercator-project@*", "@types/viewport-mercator-project@^6.1.2":
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/@types/viewport-mercator-project/-/viewport-mercator-project-6.1.2.tgz#81c28c868625bb83d373a2b726cebb7958a71d8e"
+  integrity sha512-21U4s61ZMUx95F2Uc9DpXBlcSKlrkeChM+hbGWmpz8HtL+zwl/zP5pJarJmxKv/764iR9xf5870jYZ8Mby5xuQ==
+  dependencies:
+    gl-matrix "^3.2.0"
 
 "@types/ws@^8.5.1":
   version "8.5.3"
@@ -5207,7 +5224,7 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
-gl-matrix@^3.0.0, gl-matrix@^3.4.0, gl-matrix@^3.4.3:
+gl-matrix@^3.0.0, gl-matrix@^3.2.0, gl-matrix@^3.4.0, gl-matrix@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
   integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==
@@ -8121,6 +8138,13 @@ react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-map-gl@^7.0.16:
+  version "7.0.16"
+  resolved "https://registry.yarnpkg.com/react-map-gl/-/react-map-gl-7.0.16.tgz#9f558fc11790e0ea44db8f5a582171fad2355ff8"
+  integrity sha512-H8dTm4a09D+eI6PSl/hXMTA+vfoPXnfOKjQRxqzY4q1tSt/r3jqTRrb0CwVTi2sAvUJOrDsNCMQCKiEFYQ89eg==
+  dependencies:
+    "@types/mapbox-gl" "^2.6.0"
 
 react-refresh@^0.11.0:
   version "0.11.0"
