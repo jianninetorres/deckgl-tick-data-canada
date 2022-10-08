@@ -50,7 +50,8 @@ const App = () => {
       d.properties.year !== null &&
       d.properties.randomized_lat !== null &&
       d.properties.randomized_lon !== null &&
-      d.geometry !== null
+      d.geometry !== null &&
+      d.geometry.type === "Point"
   ) as DataProps[];
 
   useEffect(() => {

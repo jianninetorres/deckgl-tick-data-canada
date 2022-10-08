@@ -1,4 +1,4 @@
-import { ColumnLayer } from "@deck.gl/layers/typed";
+import { GeoJsonLayer } from "@deck.gl/layers/typed";
 
 import { DataProps } from "./App";
 
@@ -9,17 +9,25 @@ interface RenderLayersProps {
 
 const RenderLayers = (props: RenderLayersProps) => {
   const layers = [
-    new ColumnLayer({
+    new GeoJsonLayer({
       id: "tick-data",
       data: props.data,
-      getPosition: (d) => d.geometry.coordinates,
-      diskResolution: 10000,
-      radius: 10000,
-      getFillColor: [255, 193, 51],
+      getFillColor: [160, 160, 180, 200],
       extruded: true,
-      elevationScale: 20,
       pickable: true, //  identify an object and the layer it's in
-      onHover: props.onHover,
+      stroked: false,
+      filled: true,
+      pointRadiusUnits: "pixels",
+      pointType: "circle+text",
+      lineWidthScale: 20,
+      lineWidthMinPixels: 4,
+      getLineColor: [225, 133, 61],
+      getPointRadius: 4,
+      getLineWidth: 5,
+      getElevation: 30,
+      getText: (d: { properties: { tick_species: any } }) =>
+        d.properties.tick_species,
+      getTextSize: 12,
     }),
   ];
 
