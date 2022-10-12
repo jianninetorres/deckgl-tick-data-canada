@@ -1,5 +1,4 @@
-import { ColumnLayer } from "@deck.gl/layers/typed";
-
+import { ScatterplotLayer } from "@deck.gl/layers/typed";
 import { DataProps } from "./App";
 
 interface RenderLayersProps {
@@ -9,15 +8,20 @@ interface RenderLayersProps {
 
 const RenderLayers = (props: RenderLayersProps) => {
   const layers = [
-    new ColumnLayer({
+    new ScatterplotLayer({
       id: "tick-data",
       data: props.data,
       getPosition: (d) => d.geometry.coordinates,
-      diskResolution: 10000,
-      radius: 10000,
-      getFillColor: [255, 193, 51],
+      getRadius: 50,
+      getFillColor: [255, 217, 102],
       extruded: true,
-      elevationScale: 20,
+      opacity: 0.8,
+      stroked: true,
+      filled: true,
+      radiusScale: 6,
+      radiusMinPixels: 1,
+      radiusMaxPixels: 100,
+      lineWidthMinPixels: 1,
       pickable: true, //  identify an object and the layer it's in
       // onHover: props.onHover,
     }),
