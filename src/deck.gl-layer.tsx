@@ -4,7 +4,7 @@ import { DataProps } from "./App";
 
 interface RenderLayersProps {
   data: DataProps[];
-  onHover: (hover: any) => void;
+  // onHover: (hover: any) => void;
 }
 
 const RenderLayers = (props: RenderLayersProps) => {

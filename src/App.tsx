@@ -32,17 +32,17 @@ export interface DataProps {
   };
 }
 
-interface TooltipProps {
-  x: number;
-  y: number;
-  object: {
-    [key: string]: string;
-  };
-}
+// interface TooltipProps {
+//   x: number;
+//   y: number;
+//   object: {
+//     [key: string]: string;
+//   };
+// }
 
 const App = () => {
   const [data, setData] = useState<DataProps[]>([]);
-  const [hover, setHover] = useState<TooltipProps>();
+  // const [hover, setHover] = useState<TooltipProps>();
 
   const tickData = tickData2018.filter(
     (d) =>
@@ -67,10 +67,10 @@ const App = () => {
     bearing: 0, // direction it. North = 0
   };
 
-  const onHover = ({ x, y, object }: TooltipProps) => {
-    setHover({ x, y, object });
-    console.log({ x, y, object });
-  };
+  // const onHover = ({ x, y, object }: TooltipProps) => {
+  //   setHover({ x, y, object });
+  //   console.log({ x, y, object });
+  // };
 
   return (
     <div>
@@ -79,7 +79,7 @@ const App = () => {
         controller={true}
         layers={RenderLayers({
           data,
-          onHover: (hover) => onHover(hover),
+          // onHover: (hover) => onHover(hover),
         })}
       >
         <StaticMap
