@@ -79,8 +79,12 @@ const App = () => {
         controller={true}
         layers={RenderLayers({
           data,
-          onHover: (hover) => onHover(hover),
         })}
+        getTooltip={({ object }) =>
+          object &&
+          `${object.properties.tick_species}
+          ${object.properties.location_nam}, ${object.properties.year}`
+        }
       >
         <StaticMap
           mapStyle={mapStyle}
