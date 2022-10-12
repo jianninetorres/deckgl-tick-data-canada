@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import DeckGL from "@deck.gl/react/typed";
 import StaticMap from "react-map-gl";
-// import axios from "axios";
 import RenderLayers from "./deck.gl-layer";
 import { tickData2018 } from "./tick-data-2018";
 

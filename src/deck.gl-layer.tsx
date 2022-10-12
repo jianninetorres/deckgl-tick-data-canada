@@ -1,4 +1,3 @@
-import { GeoJsonLayer } from "@deck.gl/layers/typed";
 import { HeatmapLayer } from "@deck.gl/aggregation-layers/typed";
 
 import { DataProps } from "./App";
